@@ -6,4 +6,5 @@ Run GUI.py to show the process.
 
 Run IDA_Star to run IDA*.
 
-![image-20210616113105431](https://tva1.sinaimg.cn/large/008i3skNgy1grjy7qb19bj60zk0km40a02.jpg)
+![image-20210702221707558](https://tva1.sinaimg.cn/large/008i3skNly1gs2ysucxj2j60zk0km75u02.jpg)
+

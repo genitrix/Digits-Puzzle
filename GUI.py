@@ -120,7 +120,7 @@ def next_state():
         print(path[Game.step])
         Game.step += 1
     elif Game.step == len(path):
-        print("到达目标状态")
+        print("Reach target state")
         Game.step += 1
 
 
@@ -132,7 +132,7 @@ def return_init_state():
     Game.curr_pieces = fill(current_state)
     Game.step += 1
     # 打印初始状态
-    print("初始状态：")
+    print("Initial state:")
     print('step', 0)
     print(path[0])
 
@@ -235,11 +235,11 @@ class Game():
             font_medium = pygame.font.Font('font.TTF', 32)
             font_small = pygame.font.Font('font.TTF', 20)
             # font_large = pygame.font.Font(None, 72)
-            text_src = font_large.render("当前状态", True, Color.BLUE)
-            text_dest = font_large.render("目标状态", True, Color.RED)
-            text_remind_1 = font_small.render("按Enter或者点击移动数码方块", True, Color.GREY)
-            text_remind_2 = font_large.render("已经到达最终状态，点击右侧按钮继续", True, Color.GREY)
-            text_remind_3 = font_small.render("按ESC退出程序", True, Color.GREY)
+            text_src = font_large.render("Current State", True, Color.BLUE)
+            text_dest = font_large.render("Target State", True, Color.RED)
+            text_remind_1 = font_small.render("Press Enter or click to move the block", True, Color.GREY)
+            text_remind_2 = font_large.render("The final state has been reached. Click to continue.", True, Color.GREY)
+            text_remind_3 = font_small.render("Press ESC to exit the program", True, Color.GREY)
 
             text_src_rect = text_src.get_rect()
             text_src_rect.center = (574 / 4 + 5, screen.get_height() / 2)
@@ -266,16 +266,16 @@ class Game():
 
             # 设置按钮
             # 下一个状态
-            button("移动数码方块", 860, 12, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, next_state)
+            button("Move digital block", 860, 12, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, next_state)
             # 回到初始状态
-            button("回到初始状态", 860, BlockWidth + 12 * 2, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, return_init_state)
+            button("Return to initial state", 860, BlockWidth + 12 * 2, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, return_init_state)
             # 刷新初始状态
-            button("更换初始状态", 860, (BlockWidth + 12) * 2 + 12, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, new_state)
+            button("Modify initial state", 860, (BlockWidth + 12) * 2 + 12, 210, 65, Color.PURPLE, Color.PURPLE_CLICKED, new_state)
             # 展示GUI窗体
             # pygame.display.flip()
             icon = pygame.image.load("icon.png")
             pygame.display.set_icon(icon)
-            pygame.display.set_caption("15数码问题")
+            pygame.display.set_caption("15 Digits Puzzle")
             pygame.display.flip()
 
 
